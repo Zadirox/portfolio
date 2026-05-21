@@ -39,10 +39,9 @@ export const translations = {
           tags: ["Next.js", "Tailwind", "i18n"],
         },
         tgbot: {
-          title: "Telegram-бот записи",
-          desc: "Бот для записи на услуги с напоминаниями и интеграцией с базой данных",
-          tags: ["Telegram API", "Node.js", "Supabase"],
-          status: "В разработке",
+          title: "Серпантин — Telegram-бот",
+          desc: "Полнофункциональный бот детского центра: запись на занятия, оплата Kaspi, админ-панель, напоминания, двуязычный UI (RU/KK)",
+          tags: ["aiogram", "SQLite", "APScheduler"],
         },
         dashboard: {
           title: "SaaS-дашборд",
@@ -117,10 +116,9 @@ export const translations = {
           tags: ["Next.js", "Tailwind", "i18n"],
         },
         tgbot: {
-          title: "Telegram Booking Bot",
-          desc: "Service booking bot with reminders and database integration",
-          tags: ["Telegram API", "Node.js", "Supabase"],
-          status: "In progress",
+          title: "Serpantin — Telegram Bot",
+          desc: "Full-featured bot for a children's center: booking, Kaspi payments, admin panel, reminders, bilingual UI (RU/KK)",
+          tags: ["aiogram", "SQLite", "APScheduler"],
         },
         dashboard: {
           title: "SaaS Dashboard",
