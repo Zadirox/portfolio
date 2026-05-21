@@ -13,8 +13,8 @@ export function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const text = message
-      ? `${name ? `От ${name}: ` : ""}${message}`
-      : (name ? `Здравствуйте, я ${name}` : "Здравствуйте!");
+      ? `${name ? `${t.contact.msg_from} ${name}: ` : ""}${message}`
+      : (name ? `${t.contact.msg_hello_name} ${name}` : t.contact.msg_hello);
     const url = `https://t.me/zadirox?text=${encodeURIComponent(text)}`;
     window.open(url, "_blank");
   };
@@ -46,15 +46,15 @@ export function Contact() {
           </a>
 
           <a
-            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${contacts.email}`}
+            href={`mailto:${contacts.email}`}
             className="gradient-border card-hover group flex items-center gap-3 rounded-xl bg-surface p-4 transition-all duration-300 hover:bg-surface-hover"
           >
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent-soft text-accent">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent-soft text-accent">
               <Mail size={18} />
             </div>
-            <div>
+            <div className="min-w-0">
               <p className="text-sm font-medium text-foreground">{t.contact.email}</p>
-              <p className="text-xs text-muted">{contacts.email}</p>
+              <p className="text-xs text-muted truncate">{contacts.email}</p>
             </div>
           </a>
 

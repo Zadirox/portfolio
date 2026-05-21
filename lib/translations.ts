@@ -72,6 +72,9 @@ export const translations = {
       form_name: "Ваше имя",
       form_message: "Опишите ваш проект или задачу",
       form_send: "Написать в Telegram",
+      msg_from: "От",
+      msg_hello: "Здравствуйте!",
+      msg_hello_name: "Здравствуйте, я",
     },
     footer: {
       built_with: "Сделано на",
@@ -149,6 +152,9 @@ export const translations = {
       form_name: "Your name",
       form_message: "Describe your project or task",
       form_send: "Message on Telegram",
+      msg_from: "From",
+      msg_hello: "Hello!",
+      msg_hello_name: "Hello, I'm",
     },
     footer: {
       built_with: "Built with",
