@@ -15,7 +15,7 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-3xl text-center">
-        <div className="animate-fade-in-up mb-6 inline-flex items-center gap-2 rounded-full border border-border/50 bg-accent-soft px-4 py-1.5 text-sm text-accent">
+        <div className="animate-fade-in-up mb-6 inline-flex items-center gap-2 rounded-full border border-border/50 bg-accent-soft px-4 py-1.5 text-sm text-accent shimmer-badge" style={{ backgroundImage: "linear-gradient(90deg, transparent, rgba(103,232,249,0.1), transparent)" }}>
           <Sparkles size={14} />
           {t.hero.role}
         </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/lib/language-provider";
-import { projects, contacts } from "@/lib/data";
+import { projects } from "@/lib/data";
 import { ExternalLink, Construction } from "lucide-react";
 
 export function Projects() {
@@ -27,7 +27,7 @@ export function Projects() {
             return (
               <div
                 key={project.key}
-                className="animate-fade-in-up gradient-border group flex flex-col rounded-xl bg-surface p-6 transition-all duration-300 hover:bg-surface-hover"
+                className="animate-fade-in-up gradient-border card-hover group flex flex-col rounded-xl bg-surface p-6 transition-all duration-300 hover:bg-surface-hover"
                 style={{ animationDelay: `${0.06 * i}s` }}
               >
                 <div className="mb-1 flex items-center justify-between">

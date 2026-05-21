@@ -24,7 +24,7 @@ export function Skills() {
             return (
               <div
                 key={skill.key}
-                className="animate-fade-in-up gradient-border group rounded-xl bg-surface p-5 transition-all duration-300 hover:bg-surface-hover"
+                className="animate-fade-in-up gradient-border card-hover group rounded-xl bg-surface p-5 transition-all duration-300 hover:bg-surface-hover"
                 style={{ animationDelay: `${0.05 * i}s` }}
               >
                 <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-accent-soft text-accent transition-colors group-hover:bg-accent/20">
