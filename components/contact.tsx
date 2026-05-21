@@ -50,7 +50,7 @@ export function Contact() {
             className="gradient-border card-hover group flex items-center gap-3 rounded-xl bg-surface p-4 transition-all duration-300 hover:bg-surface-hover"
           >
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent-soft text-accent">
-              <Mail size={18} />
+              <Mail size={20} />
             </div>
             <div>
               <p className="text-sm font-medium text-foreground">{t.contact.email}</p>
