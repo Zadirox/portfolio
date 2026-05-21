@@ -54,7 +54,7 @@ export function Contact() {
             </div>
             <div className="min-w-0">
               <p className="text-sm font-medium text-foreground">{t.contact.email}</p>
-              <p className="text-xs text-muted break-all">{contacts.email}</p>
+              <p className="text-xs text-muted truncate">{contacts.email}</p>
             </div>
           </a>
 
