@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useLanguage } from "@/lib/language-provider";
 import { contacts } from "@/lib/data";
-import { Send, MessageSquare, AtSign, ExternalLink } from "lucide-react";
+import { Send, MessageSquare, Mail, ExternalLink } from "lucide-react";
 
 export function Contact() {
   const { t } = useLanguage();
@@ -49,12 +49,12 @@ export function Contact() {
             href={`mailto:${contacts.email}`}
             className="gradient-border card-hover group flex items-center gap-3 rounded-xl bg-surface p-4 transition-all duration-300 hover:bg-surface-hover"
           >
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent-soft text-accent">
-              <AtSign size={18} />
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent-soft text-accent">
+              <Mail size={18} />
             </div>
-            <div>
+            <div className="min-w-0">
               <p className="text-sm font-medium text-foreground">{t.contact.email}</p>
-              <p className="text-xs text-muted">{contacts.email}</p>
+              <p className="text-xs text-muted break-all">{contacts.email}</p>
             </div>
           </a>
 
