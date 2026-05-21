@@ -20,8 +20,8 @@ export function Projects() {
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, i) => {
             const item = t.projects.items[project.key as keyof typeof t.projects.items];
-            const statusText = project.statusKey
-              ? (item as typeof item & { status?: string }).status
+            const statusText = project.hasStatus
+              ? ("status" in item ? (item as { status: string }).status : null)
               : null;
 
             return (

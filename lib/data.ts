@@ -18,7 +18,7 @@ export interface SkillItem {
 export interface ProjectItem {
   key: string;
   href?: string;
-  statusKey?: string;
+  hasStatus?: boolean;
 }
 
 export const skills: SkillItem[] = [
@@ -34,10 +34,10 @@ export const skills: SkillItem[] = [
 
 export const projects: ProjectItem[] = [
   { key: "portfolio", href: "https://github.com/Zadirox/portfolio" },
-  { key: "tgbot", statusKey: "status" },
-  { key: "dashboard", statusKey: "status" },
-  { key: "aichat", statusKey: "status" },
-  { key: "twa", statusKey: "status" },
+  { key: "tgbot", hasStatus: true },
+  { key: "dashboard", hasStatus: true },
+  { key: "aichat", hasStatus: true },
+  { key: "twa", hasStatus: true },
 ];
 
 export const contacts = {
