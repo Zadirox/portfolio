@@ -1,11 +1,23 @@
 "use client";
 
+import { useState } from "react";
 import { useLanguage } from "@/lib/language-provider";
 import { contacts } from "@/lib/data";
 import { Send, MessageSquare, Mail, ExternalLink } from "lucide-react";
 
 export function Contact() {
   const { t } = useLanguage();
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const text = message
+      ? `${name ? `От ${name}: ` : ""}${message}`
+      : (name ? `Здравствуйте, я ${name}` : "Здравствуйте!");
+    const url = `https://t.me/zadirox?text=${encodeURIComponent(text)}`;
+    window.open(url, "_blank");
+  };
 
   return (
     <section id="contact" className="px-6 py-24">
@@ -22,7 +34,7 @@ export function Contact() {
             href={contacts.telegram}
             target="_blank"
             rel="noopener noreferrer"
-            className="gradient-border group flex items-center gap-3 rounded-xl bg-surface p-4 transition-all duration-300 hover:bg-surface-hover"
+            className="gradient-border card-hover group flex items-center gap-3 rounded-xl bg-surface p-4 transition-all duration-300 hover:bg-surface-hover"
           >
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent-soft text-accent">
               <MessageSquare size={18} />
@@ -35,14 +47,14 @@ export function Contact() {
 
           <a
             href={`mailto:${contacts.email}`}
-            className="gradient-border group flex items-center gap-3 rounded-xl bg-surface p-4 transition-all duration-300 hover:bg-surface-hover"
+            className="gradient-border card-hover group flex items-center gap-3 rounded-xl bg-surface p-4 transition-all duration-300 hover:bg-surface-hover"
           >
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent-soft text-accent">
               <Mail size={18} />
             </div>
             <div>
               <p className="text-sm font-medium text-foreground">{t.contact.email}</p>
-              <p className="text-xs text-muted break-all">shahmatov.d90@gmail.com</p>
+              <p className="text-xs text-muted">{contacts.email}</p>
             </div>
           </a>
 
@@ -50,7 +62,7 @@ export function Contact() {
             href={contacts.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="gradient-border group flex items-center gap-3 rounded-xl bg-surface p-4 transition-all duration-300 hover:bg-surface-hover"
+            className="gradient-border card-hover group flex items-center gap-3 rounded-xl bg-surface p-4 transition-all duration-300 hover:bg-surface-hover"
           >
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent-soft text-accent">
               <ExternalLink size={18} />
@@ -63,8 +75,7 @@ export function Contact() {
         </div>
 
         <form
-          action={`mailto:${contacts.email}`}
-          method="GET"
+          onSubmit={handleSubmit}
           className="animate-fade-in-up mt-10 rounded-xl border border-border/50 bg-surface p-6"
           style={{ animationDelay: "0.3s" }}
         >
@@ -74,20 +85,22 @@ export function Contact() {
             </label>
             <input
               id="name"
-              name="name"
               type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               className="w-full rounded-lg border border-border/50 bg-background px-4 py-2.5 text-sm text-foreground placeholder-muted/50 outline-none transition-colors focus:border-accent/40"
               placeholder={t.contact.form_name}
             />
           </div>
           <div className="mb-5">
-            <label htmlFor="body" className="mb-1.5 block text-sm font-medium text-foreground">
+            <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-foreground">
               {t.contact.form_message}
             </label>
             <textarea
-              id="body"
-              name="body"
+              id="message"
               rows={4}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               className="w-full resize-none rounded-lg border border-border/50 bg-background px-4 py-2.5 text-sm text-foreground placeholder-muted/50 outline-none transition-colors focus:border-accent/40"
               placeholder={t.contact.form_message}
             />

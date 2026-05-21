@@ -15,14 +15,14 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Zadirox — AI-Powered Developer",
+  title: "Zadirox — Fullstack Developer",
   description:
-    "Вайб-кодер. AI-ускоренная разработка: Telegram-боты, веб-приложения, автоматизация. Быстро. Качественно. С интеллектом.",
-  keywords: ["вайб-кодер", "AI разработка", "Telegram боты", "Next.js", "автоматизация"],
+    "Fullstack-разработчик. Telegram-боты, веб-приложения, автоматизация. Быстро. Качественно.",
+  keywords: ["fullstack разработчик", "Telegram боты", "Next.js", "автоматизация", "веб-разработка"],
   authors: [{ name: "Dmitry", url: "https://github.com/Zadirox" }],
   openGraph: {
-    title: "Zadirox — AI-Powered Developer",
-    description: "AI-ускоренная разработка: боты, веб, автоматизация",
+    title: "Zadirox — Fullstack Developer",
+    description: "Telegram-боты, веб-приложения, автоматизация",
     type: "website",
   },
 };
@@ -37,7 +37,7 @@ export default function RootLayout({
       lang="ru"
       className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col grid-bg">{children}</body>
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }
