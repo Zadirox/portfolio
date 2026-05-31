@@ -36,7 +36,7 @@ export const projects: ProjectItem[] = [
   { key: "portfolio", href: "https://github.com/Zadirox/portfolio" },
   { key: "tgbot", href: "https://github.com/Zadirox/serpantin-bot-portfolio" },
   { key: "dashboard", href: "https://github.com/Zadirox/dashboard-portfolio" },
-  { key: "aichat", hasStatus: true },
+  { key: "aichat", href: "https://github.com/Zadirox/ai-rag-chatbot" },
   { key: "twa", hasStatus: true },
 ];
 

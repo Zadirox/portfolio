@@ -50,9 +50,8 @@ export const translations = {
         },
         aichat: {
           title: "AI-чатбот",
-          desc: "Умный ассистент с RAG: загружаешь документ — бот отвечает по контексту",
-          tags: ["OpenAI", "Embeddings", "Next.js"],
-          status: "В разработке",
+          desc: "RAG-ассистент: загрузи документ — бот отвечает по контексту с цитатами, streaming, BYOK, мульти-документ",
+          tags: ["Next.js 16", "OpenAI", "RAG"],
         },
         twa: {
           title: "Telegram Mini App",
@@ -129,9 +128,8 @@ export const translations = {
         },
         aichat: {
           title: "AI Chatbot",
-          desc: "Smart RAG assistant: upload a document — bot answers from context",
-          tags: ["OpenAI", "Embeddings", "Next.js"],
-          status: "In progress",
+          desc: "RAG assistant: upload documents — bot answers with citations, streaming, BYOK, multi-document Q&A",
+          tags: ["Next.js 16", "OpenAI", "RAG"],
         },
         twa: {
           title: "Telegram Mini App",
