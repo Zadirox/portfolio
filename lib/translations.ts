@@ -45,9 +45,8 @@ export const translations = {
         },
         dashboard: {
           title: "SaaS-дашборд",
-          desc: "Аналитический дашборд с графиками, таблицами и фильтрами",
-          tags: ["Next.js", "Recharts", "shadcn/ui"],
-          status: "В разработке",
+          desc: "Аналитический дашборд с метриками, 5 страниц, графики, конверсия валют (USD/EUR/KZT/RUB), RU/EN интерфейс",
+          tags: ["Next.js 16", "Recharts", "Tailwind v4"],
         },
         aichat: {
           title: "AI-чатбот",
@@ -125,9 +124,8 @@ export const translations = {
         },
         dashboard: {
           title: "SaaS Dashboard",
-          desc: "Analytics dashboard with charts, tables and filters",
-          tags: ["Next.js", "Recharts", "shadcn/ui"],
-          status: "In progress",
+          desc: "Analytics dashboard with metrics, 5 pages, charts, currency conversion (USD/EUR/KZT/RUB), RU/EN interface",
+          tags: ["Next.js 16", "Recharts", "Tailwind v4"],
         },
         aichat: {
           title: "AI Chatbot",

@@ -35,7 +35,7 @@ export const skills: SkillItem[] = [
 export const projects: ProjectItem[] = [
   { key: "portfolio", href: "https://github.com/Zadirox/portfolio" },
   { key: "tgbot", href: "https://github.com/Zadirox/serpantin-bot-portfolio" },
-  { key: "dashboard", hasStatus: true },
+  { key: "dashboard", href: "https://github.com/Zadirox/dashboard-portfolio" },
   { key: "aichat", hasStatus: true },
   { key: "twa", hasStatus: true },
 ];
